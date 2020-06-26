@@ -61,8 +61,29 @@ $main-color: lightblue;
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100% auto;
+        display: grid;
+        justify-content: left;
+        align-items: center;
+        padding-left: 15%;
         .first-div-content{
-            
+            h2{
+                color: white;
+            }
+            .center-h{
+                font-weight: 100;
+                font-size: 3.2em;
+            }
+            .plastic-h{
+                font-size: 3.5em;
+            }
         }
+    }
+    #our-locations{
+        width: 86%;
+        height: 50vh;
+        background-color: aquamarine;
+        position: absolute;
+        top: 70vh;
+        left: 7%;
     }
 }
