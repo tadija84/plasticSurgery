@@ -2,4 +2,62 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+#aside {
+  background-color: lightblue;
+}
+
+#main {
+  width: 100vw;
+}
+
+#main header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  padding: 0 15%;
+}
+
+#main header #logo {
+  width: 50%;
+  height: 100%;
+  background-image: url("./images/GenteraLogo.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 50% auto;
+}
+
+#main header #header-content {
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 4fr 4fr 1fr;
+  grid-column-gap: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+#main header #header-content #phone {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main header #header-content button {
+  height: 60%;
+}
+
+#main header #header-content #burger-menu {
+  padding: 2% 0;
+  height: 60%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-around;
+}
+
+#main header #header-content #burger-menu .burger-div {
+  height: 40%;
+  background-color: blue;
+}
 /*# sourceMappingURL=style.css.map */
