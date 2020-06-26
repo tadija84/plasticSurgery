@@ -9,6 +9,7 @@
 
 #main {
   width: 100vw;
+  background-color: whitesmoke;
 }
 
 #main header {
@@ -93,9 +94,18 @@
 #main #our-locations {
   width: 86%;
   height: 50vh;
-  background-color: aquamarine;
+  background-color: white;
   position: absolute;
   top: 70vh;
   left: 7%;
+  border-radius: 2vh;
+}
+
+#main #our-locations h1 {
+  color: grey;
+}
+
+#main #our-locations span {
+  color: lightblue;
 }
 /*# sourceMappingURL=style.css.map */
