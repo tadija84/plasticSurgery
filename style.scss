@@ -2,6 +2,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+button:hover{
+  cursor: pointer;
+}
 $main-color: lightblue;
 #aside {
   background-color: $main-color;
@@ -36,7 +39,7 @@ $main-color: lightblue;
         justify-content: center;
         align-items: center;
         color: $main-color;
-        span{
+        span {
           color: red;
         }
       }
@@ -56,6 +59,9 @@ $main-color: lightblue;
         .burger-div {
           background-color: $main-color;
         }
+      }
+      #burger-menu:hover{
+        cursor: pointer;
       }
     }
   }
@@ -149,7 +155,7 @@ $main-color: lightblue;
     }
   }
   #our-services {
-    height: 120vh;
+    height: 135vh;
     width: 100%;
     padding-top: 60vh;
     h1 {
@@ -160,85 +166,108 @@ $main-color: lightblue;
       color: $main-color;
     }
     .our-services-content {
-      padding: 5vh 10%;
+      padding: 10vh 10%;
       width: 100%;
-      height: 50vh;
+      height: 45vh;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap: 5%;
-
+      grid-gap: 3%;
       .one-service {
         background-color: $main-color;
-
         display: grid;
         align-items: center;
         justify-content: center;
+        height: 45vh;
+        border-radius: 2vh;
         .service-image {
           display: grid;
           align-items: center;
           justify-content: center;
-          div{
-            width: 20vh;
-          height: 20vh;
-          border-radius: 50%;
-          background-position: center;
-          background-size: cover;
           position: relative;
-          bottom: 5vh;
+          bottom: 10vh;
+          div {
+            width: 20vh;
+            height: 20vh;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
           }
-          
+        }
+        h5,
+        p {
+          position: relative;
+          bottom: 10vh;
+          text-align: center;
+          padding: 0 5%;
+        }
+        h5 {
+          color: rgb(5, 144, 133);
+          font-size: 1.3em;
+          padding-bottom: 5vh;
+        }
+        button {
+          background-color: white;
+          width: 80%;
+          height: 10vh;
+          position: relative;
+          bottom: 6vh;
+          left: 10%;
+          border: none;
+          border-radius: 1vh;
+          color: $main-color;
+        }
+        button:hover {
+          background-color: rgb(5, 144, 133);
         }
       }
       .first-service {
         .service-image {
-         
-          div{
-             background-image: url("./images/face.png");
+          div {
+            background-image: url("./images/face.png");
           }
-         
         }
       }
       .second-service {
         .service-image {
-          div{
-             background-image: url("./images/breast.png");
+          div {
+            background-image: url("./images/breast.png");
           }
-         
         }
       }
       .third-service {
         .service-image {
-          div{
-             background-image: url("./images/body.png");
+          div {
+            background-image: url("./images/body.png");
           }
-         
         }
       }
       .fourth-service {
         .service-image {
-          div{
-             background-image: url("./images/labia.png");
+          div {
+            background-image: url("./images/labia.png");
           }
-         
         }
       }
     }
   }
   #selected-service {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     background-image: url("./images/services-background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 5vh 15%;
+    padding: 7vh 15%;
     #selected-service-info {
       width: 100%;
-      height: 40vh;
+      height: 46vh;
       background-color: white;
+      border-radius: 2vh;
+      padding: 5vh 5%;
       h2 {
         color: grey;
         text-align: center;
+        margin-bottom: 5vh;
       }
       span {
         color: $main-color;
@@ -247,6 +276,26 @@ $main-color: lightblue;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        ul {
+          list-style: none;
+          li{
+            margin-bottom: 2vh;
+            font-size: 1.1em;
+          }
+          li:hover{
+            margin-left: 0.5em;
+            cursor: pointer;
+          }
+          li::before {
+            content: "\203A";
+            color: $main-color;
+            font-weight: bolder;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            font-size: 1.2em;
+          }
+        }
       }
     }
   }
@@ -265,6 +314,11 @@ $main-color: lightblue;
       p {
         margin-bottom: 5vh;
       }
+      h2{
+        span{
+          font-weight: 100;
+        }
+      }
     }
     .our-mission-pic {
       width: 20%;
@@ -275,16 +329,19 @@ $main-color: lightblue;
       background-size: cover;
       position: relative;
       bottom: 55vh;
-      left: 60%;
+      left: 65%;
     }
     #mission-button {
       position: relative;
       height: 10vh;
+      width: 15%;
       bottom: 70vh;
       left: 15%;
       background-color: white;
       border: none;
       border-radius: 1vh;
+      color: $main-color;
+      font-size: 1.2em;
     }
   }
   #get-in-touch {
@@ -294,118 +351,207 @@ $main-color: lightblue;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    padding-top: 10vh;
     h2 {
       color: grey;
       text-align: center;
+      font-size: 2em;
     }
     span {
       color: $main-color;
     }
     p {
-      padding: 0 20%;
+      padding: 3vh 20% 8vh;
       text-align: center;
+      font-size: 1.5em;
     }
     #contact-form {
-      width: 70%;
-      height: 80vh;
+      width: 50%;
+      height: 60vh;
       background-color: white;
       position: relative;
-      left: 15%;
+      left: 25%;
       border-radius: 2vh;
-      border: solid black 2px;
+      padding: 5vh 5%;
       h2 {
         color: $main-color;
         text-align: center;
+        font-size: 1.5em;
+        
       }
       #user-datas {
+        margin-top: 5vh;
         width: 100%;
-        height: 20vh;
+        height: 15vh;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-gap: 1em;
+        grid-gap: 3vh;
         input {
+          border: solid black 1px;
+          border-radius: 2vh;
         }
       }
       #user-country {
+        margin-top: 3vh;
+        border-radius: 2vh;
         width: 100%;
-        height: 10vh;
+        height: 6vh;
       }
       #user-message {
+        margin-top: 3vh;
+        border-radius: 2vh;
         width: 100%;
-        height: 30vh;
+        height: 12vh;
       }
-      #form-submit{
-          background-color: $main-color;
-          height: 10vh;
+      #form-submit {
+        background-color: $main-color;
+        height: 10vh;
+        border-radius: 2vh;
+        border: none;
+        width: 35%;
+        margin-top: 3vh;
+        margin-left: 30%;
       }
     }
   }
-  #socialize-with-us{
-    height: 100vh;
+  #socialize-with-us {
+    height: 110vh;
     width: 100%;
-    padding-top: 20vh;
+    padding-top: 30vh;
     h1 {
       color: grey;
       text-align: center;
+      margin-bottom: 5vh;
     }
     span {
       color: $main-color;
     }
-    #socialize-content{
+    #socialize-content {
       width: 100%;
       height: 40vh;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      .one-socialize-div{
+      .one-socialize-div {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        
+        .inside-div{
+          width: 100%;
+          height: 100%;
+          display: grid;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10vh 10%;
+          h4,p{
+            color: white;
+            display: none;
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+          }
+          p{
+            font-size: 0.7em;
+          }
+        }
+        .inside-div:hover{
+          background-color: rgba(0,0,0,0.5);
+          cursor: pointer;
+          h4,p{
+            display: inline-block;
+          }
+        }
       }
-      .one-socialize-div:hover{
-        filter: grayscale(100%);
+      .one-socialize-div:hover {
+        
       }
-      .first-socialize{
+      .first-socialize {
         background-image: url("./images/insta1.png");
       }
-      .second-socialize{
+      .second-socialize {
         background-image: url("./images/insta2.png");
       }
-      .third-socialize{
+      .third-socialize {
         background-image: url("./images/insta3.png");
       }
-      .fourth-socialize{
+      .fourth-socialize {
         background-image: url("./images/insta4.png");
       }
-      .fifth-socialize{
+      .fifth-socialize {
         background-image: url("./images/insta5.png");
       }
     }
   }
-  #social-networks-wraper{
+  #social-networks-wraper {
     width: 70%;
     left: 15%;
-    height: 35vh;
+    height: 25vh;
     background-color: white;
     border-radius: 2vh;
     position: absolute;
-    top: 480vh;
-    .bottom-logo{
+    top: 520vh;
+    .bottom-logo {
       width: 100%;
       height: 50%;
       background-image: url("./images/GenteraLogo.png");
       background-repeat: no-repeat;
       background-position: center;
-      background-size: auto;
+      background-size: 25% auto;
     }
-    h5{
+    h5 {
       text-align: center;
+      padding: 0 10%;
+    }
+    .social-nets-logos{
+      width: 100%;
+      height: 7vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 35% 0;
+      .one-net-logo{
+        height: 5vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      .first-net-logo{ 
+        background-image: url("./images/FB.png");
+      }
+      .second-net-logo{
+        background-image: url("./images/insta.png");
+      }
+      .third-net-logo{
+        background-image: url("./images/IN.png");
+      }
     }
   }
-  #locations-contact-datas{
-    background-color:$main-color ;
-    padding: 15vh 15% 0;
+  #locations-contact-datas {
+    height: 50vh;
+    background-color: $main-color;
+    color: white;
+    padding: 0 15% 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    .one-location-info{
+      padding: 15vh 5% 5vh;
+      height: 50vh;
+      
+      h2:after {
+        content:"";
+        display: block;
+        height: 0.5em;
+        vertical-align: bottom;
+        width: 50%;      
+        border-top: 1px solid white;
+    }
+    }
+    .second-location-info{
+border-left: solid white 1px;
+border-right: solid white 1px;
+    }
   }
 }

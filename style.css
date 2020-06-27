@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 #aside {
   background-color: lightblue;
 }
@@ -68,6 +72,10 @@
 
 #main header #header-content #burger-menu .burger-div {
   background-color: lightblue;
+}
+
+#main header #header-content #burger-menu:hover {
+  cursor: pointer;
 }
 
 #main .first-div {
@@ -172,7 +180,7 @@
 }
 
 #main #our-services {
-  height: 120vh;
+  height: 135vh;
   width: 100%;
   padding-top: 60vh;
 }
@@ -187,12 +195,12 @@
 }
 
 #main #our-services .our-services-content {
-  padding: 5vh 10%;
+  padding: 10vh 10%;
   width: 100%;
-  height: 50vh;
+  height: 45vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 5%;
+  grid-gap: 3%;
 }
 
 #main #our-services .our-services-content .one-service {
@@ -200,12 +208,16 @@
   display: grid;
   align-items: center;
   justify-content: center;
+  height: 45vh;
+  border-radius: 2vh;
 }
 
 #main #our-services .our-services-content .one-service .service-image {
   display: grid;
   align-items: center;
   justify-content: center;
+  position: relative;
+  bottom: 10vh;
 }
 
 #main #our-services .our-services-content .one-service .service-image div {
@@ -214,8 +226,36 @@
   border-radius: 50%;
   background-position: center;
   background-size: cover;
+}
+
+#main #our-services .our-services-content .one-service h5,
+#main #our-services .our-services-content .one-service p {
   position: relative;
-  bottom: 5vh;
+  bottom: 10vh;
+  text-align: center;
+  padding: 0 5%;
+}
+
+#main #our-services .our-services-content .one-service h5 {
+  color: #059085;
+  font-size: 1.3em;
+  padding-bottom: 5vh;
+}
+
+#main #our-services .our-services-content .one-service button {
+  background-color: white;
+  width: 80%;
+  height: 10vh;
+  position: relative;
+  bottom: 6vh;
+  left: 10%;
+  border: none;
+  border-radius: 1vh;
+  color: lightblue;
+}
+
+#main #our-services .our-services-content .one-service button:hover {
+  background-color: #059085;
 }
 
 #main #our-services .our-services-content .first-service .service-image div {
@@ -236,23 +276,26 @@
 
 #main #selected-service {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   background-image: url("./images/services-background.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 5vh 15%;
+  padding: 7vh 15%;
 }
 
 #main #selected-service #selected-service-info {
   width: 100%;
-  height: 40vh;
+  height: 46vh;
   background-color: white;
+  border-radius: 2vh;
+  padding: 5vh 5%;
 }
 
 #main #selected-service #selected-service-info h2 {
   color: grey;
   text-align: center;
+  margin-bottom: 5vh;
 }
 
 #main #selected-service #selected-service-info span {
@@ -263,6 +306,30 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+#main #selected-service #selected-service-info .selected-service-info-content ul {
+  list-style: none;
+}
+
+#main #selected-service #selected-service-info .selected-service-info-content ul li {
+  margin-bottom: 2vh;
+  font-size: 1.1em;
+}
+
+#main #selected-service #selected-service-info .selected-service-info-content ul li:hover {
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+
+#main #selected-service #selected-service-info .selected-service-info-content ul li::before {
+  content: "\203A";
+  color: lightblue;
+  font-weight: bolder;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-size: 1.2em;
 }
 
 #main #our-mission {
@@ -285,6 +352,10 @@
   margin-bottom: 5vh;
 }
 
+#main #our-mission .our-mission-content h2 span {
+  font-weight: 100;
+}
+
 #main #our-mission .our-mission-pic {
   width: 20%;
   height: 65vh;
@@ -294,17 +365,20 @@
   background-size: cover;
   position: relative;
   bottom: 55vh;
-  left: 60%;
+  left: 65%;
 }
 
 #main #our-mission #mission-button {
   position: relative;
   height: 10vh;
+  width: 15%;
   bottom: 70vh;
   left: 15%;
   background-color: white;
   border: none;
   border-radius: 1vh;
+  color: lightblue;
+  font-size: 1.2em;
 }
 
 #main #get-in-touch {
@@ -314,11 +388,13 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-top: 10vh;
 }
 
 #main #get-in-touch h2 {
   color: grey;
   text-align: center;
+  font-size: 2em;
 }
 
 #main #get-in-touch span {
@@ -326,58 +402,76 @@
 }
 
 #main #get-in-touch p {
-  padding: 0 20%;
+  padding: 3vh 20% 8vh;
   text-align: center;
+  font-size: 1.5em;
 }
 
 #main #get-in-touch #contact-form {
-  width: 70%;
-  height: 80vh;
+  width: 50%;
+  height: 60vh;
   background-color: white;
   position: relative;
-  left: 15%;
+  left: 25%;
   border-radius: 2vh;
-  border: solid black 2px;
+  padding: 5vh 5%;
 }
 
 #main #get-in-touch #contact-form h2 {
   color: lightblue;
   text-align: center;
+  font-size: 1.5em;
 }
 
 #main #get-in-touch #contact-form #user-datas {
+  margin-top: 5vh;
   width: 100%;
-  height: 20vh;
+  height: 15vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 1em;
+  grid-gap: 3vh;
+}
+
+#main #get-in-touch #contact-form #user-datas input {
+  border: solid black 1px;
+  border-radius: 2vh;
 }
 
 #main #get-in-touch #contact-form #user-country {
+  margin-top: 3vh;
+  border-radius: 2vh;
   width: 100%;
-  height: 10vh;
+  height: 6vh;
 }
 
 #main #get-in-touch #contact-form #user-message {
+  margin-top: 3vh;
+  border-radius: 2vh;
   width: 100%;
-  height: 30vh;
+  height: 12vh;
 }
 
 #main #get-in-touch #contact-form #form-submit {
   background-color: lightblue;
   height: 10vh;
+  border-radius: 2vh;
+  border: none;
+  width: 35%;
+  margin-top: 3vh;
+  margin-left: 30%;
 }
 
 #main #socialize-with-us {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
-  padding-top: 20vh;
+  padding-top: 30vh;
 }
 
 #main #socialize-with-us h1 {
   color: grey;
   text-align: center;
+  margin-bottom: 5vh;
 }
 
 #main #socialize-with-us span {
@@ -397,8 +491,35 @@
   background-size: cover;
 }
 
-#main #socialize-with-us #socialize-content .one-socialize-div:hover {
-  filter: grayscale(100%);
+#main #socialize-with-us #socialize-content .one-socialize-div .inside-div {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10vh 10%;
+}
+
+#main #socialize-with-us #socialize-content .one-socialize-div .inside-div h4, #main #socialize-with-us #socialize-content .one-socialize-div .inside-div p {
+  color: white;
+  display: none;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#main #socialize-with-us #socialize-content .one-socialize-div .inside-div p {
+  font-size: 0.7em;
+}
+
+#main #socialize-with-us #socialize-content .one-socialize-div .inside-div:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#main #socialize-with-us #socialize-content .one-socialize-div .inside-div:hover h4, #main #socialize-with-us #socialize-content .one-socialize-div .inside-div:hover p {
+  display: inline-block;
 }
 
 #main #socialize-with-us #socialize-content .first-socialize {
@@ -424,11 +545,11 @@
 #main #social-networks-wraper {
   width: 70%;
   left: 15%;
-  height: 35vh;
+  height: 25vh;
   background-color: white;
   border-radius: 2vh;
   position: absolute;
-  top: 480vh;
+  top: 520vh;
 }
 
 #main #social-networks-wraper .bottom-logo {
@@ -437,17 +558,68 @@
   background-image: url("./images/GenteraLogo.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto;
+  background-size: 25% auto;
 }
 
 #main #social-networks-wraper h5 {
   text-align: center;
+  padding: 0 10%;
+}
+
+#main #social-networks-wraper .social-nets-logos {
+  width: 100%;
+  height: 7vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 35% 0;
+}
+
+#main #social-networks-wraper .social-nets-logos .one-net-logo {
+  height: 5vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#main #social-networks-wraper .social-nets-logos .first-net-logo {
+  background-image: url("./images/FB.png");
+}
+
+#main #social-networks-wraper .social-nets-logos .second-net-logo {
+  background-image: url("./images/insta.png");
+}
+
+#main #social-networks-wraper .social-nets-logos .third-net-logo {
+  background-image: url("./images/IN.png");
 }
 
 #main #locations-contact-datas {
+  height: 50vh;
   background-color: lightblue;
-  padding: 15vh 15% 0;
+  color: white;
+  padding: 0 15% 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+#main #locations-contact-datas .one-location-info {
+  padding: 15vh 5% 5vh;
+  height: 50vh;
+}
+
+#main #locations-contact-datas .one-location-info h2:after {
+  content: "";
+  display: block;
+  height: 0.5em;
+  vertical-align: bottom;
+  width: 50%;
+  border-top: 1px solid white;
+}
+
+#main #locations-contact-datas .second-location-info {
+  border-left: solid white 1px;
+  border-right: solid white 1px;
 }
 /*# sourceMappingURL=style.css.map */
