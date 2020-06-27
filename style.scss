@@ -509,6 +509,7 @@ $main-color: lightblue;
       height: 7vh;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 5%;
       justify-content: space-around;
       align-items: center;
       padding: 0 35% 0;
@@ -517,6 +518,9 @@ $main-color: lightblue;
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+      }
+      .one-net-logo:hover{
+        cursor: pointer;
       }
       .first-net-logo{ 
         background-image: url("./images/FB.png");
@@ -537,21 +541,38 @@ $main-color: lightblue;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     .one-location-info{
-      padding: 15vh 5% 5vh;
+      padding: 15vh 10% 5vh;
       height: 50vh;
       
       h2:after {
         content:"";
         display: block;
         height: 0.5em;
-        vertical-align: bottom;
         width: 50%;      
         border-top: 1px solid white;
+    }
+    p{
+      margin-top: 3vh;
     }
     }
     .second-location-info{
 border-left: solid white 1px;
 border-right: solid white 1px;
+    }
+  }
+  footer{
+    padding: 2vh 10%;
+    height: 8vh;
+    background-color: brown;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    color: white;
+    .footer-right{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-around;
+      padding-left: 10%;
     }
   }
 }

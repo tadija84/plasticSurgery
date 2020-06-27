@@ -571,6 +571,7 @@ button:hover {
   height: 7vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5%;
   justify-content: space-around;
   align-items: center;
   padding: 0 35% 0;
@@ -581,6 +582,10 @@ button:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+#main #social-networks-wraper .social-nets-logos .one-net-logo:hover {
+  cursor: pointer;
 }
 
 #main #social-networks-wraper .social-nets-logos .first-net-logo {
@@ -605,7 +610,7 @@ button:hover {
 }
 
 #main #locations-contact-datas .one-location-info {
-  padding: 15vh 5% 5vh;
+  padding: 15vh 10% 5vh;
   height: 50vh;
 }
 
@@ -613,13 +618,33 @@ button:hover {
   content: "";
   display: block;
   height: 0.5em;
-  vertical-align: bottom;
   width: 50%;
   border-top: 1px solid white;
+}
+
+#main #locations-contact-datas .one-location-info p {
+  margin-top: 3vh;
 }
 
 #main #locations-contact-datas .second-location-info {
   border-left: solid white 1px;
   border-right: solid white 1px;
+}
+
+#main footer {
+  padding: 2vh 10%;
+  height: 8vh;
+  background-color: brown;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  color: white;
+}
+
+#main footer .footer-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  padding-left: 10%;
 }
 /*# sourceMappingURL=style.css.map */
