@@ -1,97 +1,217 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 $main-color: lightblue;
-#aside{
-    background-color: $main-color;
+#aside {
+  background-color: $main-color;
 }
-#main{
-    width: 100vw;
-    background-color: whitesmoke;
-    header{
-        width: 100%;
-        height: 10vh;
-        display: flex;
-        padding: 0 15%;
-        #logo{
-            width: 50%;
-            height: 100%;
-            background-image: url("./images/GenteraLogo.png");
-            background-repeat: no-repeat;
-            background-position: left center;
-            background-size: 50% auto;
-        }
-        #header-content{
-            width: 50%;
-            height: 100%;
-            display: grid;
-            grid-template-columns: 4fr 4fr 1fr;
-            grid-column-gap: 5%;
-            justify-content: center;
-            align-items: center;
-            #phone{
-                height: 60%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: $main-color;
-            }
-            button{
-                height: 60%;
-                background-color: $main-color;
-                border: none;
-            }
-            #burger-menu{
-                padding: 5% 0;
-                height: 60%;
-                display: grid;
-                grid-template-columns: 1fr;
-                justify-content: space-around;
-                grid-gap: 20%;
-                .burger-div{
-                background-color: $main-color;
-                }
-            }
-        }
+#main {
+  width: 100vw;
+  background-color: whitesmoke;
+  header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    padding: 0 15%;
+    #logo {
+      width: 50%;
+      height: 100%;
+      background-image: url("./images/GenteraLogo.png");
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 50% auto;
     }
-    .first-div{
-        width: 100%;
-        height: 70vh;
-        background-image: url(./images/headerimage.png);
+    #header-content {
+      width: 50%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 4fr 4fr 1fr;
+      grid-column-gap: 5%;
+      justify-content: center;
+      align-items: center;
+      #phone {
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $main-color;
+      }
+      button {
+        height: 60%;
+        background-color: $main-color;
+        border: none;
+      }
+      #burger-menu {
+        padding: 5% 0;
+        height: 60%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: space-around;
+        grid-gap: 20%;
+        .burger-div {
+          background-color: $main-color;
+        }
+      }
+    }
+  }
+  .first-div {
+    width: 100%;
+    height: 70vh;
+    background-image: url(./images/headerimage.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    padding-left: 15%;
+    .first-div-content {
+      h2 {
+        color: white;
+      }
+      .center-h {
+        font-weight: 100;
+        font-size: 3.2em;
+      }
+      .plastic-h {
+        font-size: 3.5em;
+      }
+    }
+  }
+  #our-locations {
+    width: 86%;
+    height: 50vh;
+    background-color: white;
+    position: absolute;
+    top: 70vh;
+    left: 7%;
+    border-radius: 2vh;
+    border: solid black 1px;
+    h1 {
+      color: grey;
+      text-align: center;
+    }
+    span {
+      color: $main-color;
+    }
+    .locations-content {
+      height: 35vh;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0 5%;
+      grid-gap: 5%;
+      position: absolute;
+      top: 15vh;
+      .one-location {
+        height: 40vh;
+        border-radius: 2vh;
+        background-color: blue;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 100% auto;
-        display: grid;
-        justify-content: left;
-        align-items: center;
-        padding-left: 15%;
-        .first-div-content{
-            h2{
-                color: white;
-            }
-            .center-h{
-                font-weight: 100;
-                font-size: 3.2em;
-            }
-            .plastic-h{
-                font-size: 3.5em;
-            }
-        }
-    }
-    #our-locations{
-        width: 86%;
-        height: 50vh;
+        background-size: auto;
+      }
+      h4 {
+        background-color: $main-color;
+        color: white;
+        position: absolute;
+        top: 30vh;
+      }
+      h5 {
         background-color: white;
         position: absolute;
-        top: 70vh;
-        left: 7%;
-        border-radius: 2vh;
-        h1{
-            color: grey;
-        }
-        span{
-            color: $main-color;
-        }
+        top: 40vh;
+        border-radius: 1vh;
+      }
+      .first-location {
+        background-image: url(./images/miami_image.png);
+      }
+      .second-location {
+        background-image: url(./images/boca_image.png);
+      }
+      .third-location {
+        background-image: url(./images/LA_image.png);
+      }
     }
+  }
+  #our-services {
+    height: 120vh;
+    width: 100%;
+    padding-top: 55vh;
+    h1 {
+      color: grey;
+      text-align: center;
+    }
+    span {
+      color: $main-color;
+    }
+    .our-services-content {
+      padding: 5vh 10%;
+      width: 100%;
+      height: 50vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 5%;
+
+      .one-service {
+        background-color: $main-color;
+
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        .service-image {
+          width: 10vh;
+          height: 10vh;
+          border-radius: 50%;
+          background-position: center;
+          background-size: cover;
+          position: relative;
+          bottom: 5vh;
+        }
+      }
+      .first-service {
+        .service-image {
+          background-image: url("./images/face.png");
+        }
+      }
+      .second-service {
+        .service-image {
+          background-image: url("./images/breast.png");
+        }
+      }
+      .third-service {
+        .service-image {
+          background-image: url("./images/body.png");
+        }
+      }
+      .fourth-service {
+        .service-image {
+          background-image: url("./images/labia.png");
+        }
+      }
+    }
+  }
+  #selected-service{
+      width: 100%;
+      height: 50vh;
+      background-image: url("./images/homebackground.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding: 5vh 15%;
+      #selected-service-info{
+          width: 100%;
+          height: 40vh;
+          background-color: white;
+           h2 {
+        color: grey;
+        text-align: center;
+      }
+      span {
+        color: $main-color;
+      }
+      }
+     
+  }
 }
