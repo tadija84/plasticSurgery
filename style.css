@@ -238,4 +238,29 @@
 #main #selected-service #selected-service-info span {
   color: lightblue;
 }
+
+#main #selected-service #selected-service-info .selected-service-info-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#main #our-mission {
+  height: 70vh;
+  width: 100%;
+  padding: 10vh 0;
+}
+
+#main #our-mission .our-mission-content {
+  width: 100%;
+  height: 100%;
+  background-color: #07c5b5;
+  color: white;
+  text-align: left;
+  padding: 5vh 40% 10vh 15%;
+}
+
+#main #our-mission .our-mission-content h2, #main #our-mission .our-mission-content p {
+  margin-bottom: 5vh;
+}
 /*# sourceMappingURL=style.css.map */
