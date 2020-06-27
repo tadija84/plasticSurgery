@@ -8,12 +8,12 @@ button:hover {
 }
 
 #aside {
-  background-color: lightblue;
+  background-color: #72ccca;
 }
 
 #main {
   width: 100vw;
-  background-color: whitesmoke;
+  background-color: #f8f8f8;
 }
 
 #main header {
@@ -47,7 +47,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: lightblue;
+  color: #72ccca;
 }
 
 #main header #header-content #phone span {
@@ -56,7 +56,7 @@ button:hover {
 
 #main header #header-content button {
   height: 60%;
-  background-color: lightblue;
+  background-color: #72ccca;
   border: none;
   border-radius: 1vh;
 }
@@ -71,7 +71,7 @@ button:hover {
 }
 
 #main header #header-content #burger-menu .burger-div {
-  background-color: lightblue;
+  background-color: #72ccca;
 }
 
 #main header #header-content #burger-menu:hover {
@@ -117,12 +117,12 @@ button:hover {
 
 #main #our-locations h1 {
   height: 7vh;
-  color: grey;
+  color: #999999;
   text-align: center;
 }
 
 #main #our-locations span {
-  color: lightblue;
+  color: #72ccca;
 }
 
 #main #our-locations .locations-content {
@@ -146,7 +146,7 @@ button:hover {
 }
 
 #main #our-locations .locations-content h4 {
-  background-color: lightblue;
+  background-color: #72ccca;
   color: white;
   position: absolute;
   top: 30vh;
@@ -186,12 +186,12 @@ button:hover {
 }
 
 #main #our-services h1 {
-  color: grey;
+  color: #999999;
   text-align: center;
 }
 
 #main #our-services span {
-  color: lightblue;
+  color: #72ccca;
 }
 
 #main #our-services .our-services-content {
@@ -204,7 +204,7 @@ button:hover {
 }
 
 #main #our-services .our-services-content .one-service {
-  background-color: lightblue;
+  background-color: #c0e8e7;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -237,7 +237,7 @@ button:hover {
 }
 
 #main #our-services .our-services-content .one-service h5 {
-  color: #059085;
+  color: #479492;
   font-size: 1.3em;
   padding-bottom: 5vh;
 }
@@ -251,11 +251,12 @@ button:hover {
   left: 10%;
   border: none;
   border-radius: 1vh;
-  color: lightblue;
+  color: #72ccca;
 }
 
 #main #our-services .our-services-content .one-service button:hover {
-  background-color: #059085;
+  background-color: #72ccca;
+  color: white;
 }
 
 #main #our-services .our-services-content .first-service .service-image div {
@@ -293,13 +294,13 @@ button:hover {
 }
 
 #main #selected-service #selected-service-info h2 {
-  color: grey;
+  color: #999999;
   text-align: center;
   margin-bottom: 5vh;
 }
 
 #main #selected-service #selected-service-info span {
-  color: lightblue;
+  color: #72ccca;
 }
 
 #main #selected-service #selected-service-info .selected-service-info-content {
@@ -324,7 +325,7 @@ button:hover {
 
 #main #selected-service #selected-service-info .selected-service-info-content ul li::before {
   content: "\203A";
-  color: lightblue;
+  color: #72ccca;
   font-weight: bolder;
   display: inline-block;
   width: 1em;
@@ -341,7 +342,7 @@ button:hover {
 #main #our-mission .our-mission-content {
   width: 100%;
   height: 100%;
-  background-color: #07c5b5;
+  background-color: #72ccca;
   color: white;
   text-align: left;
   padding: 5vh 40% 10vh 15%;
@@ -377,7 +378,7 @@ button:hover {
   background-color: white;
   border: none;
   border-radius: 1vh;
-  color: lightblue;
+  color: #72ccca;
   font-size: 1.2em;
 }
 
@@ -392,13 +393,13 @@ button:hover {
 }
 
 #main #get-in-touch h2 {
-  color: grey;
+  color: #999999;
   text-align: center;
   font-size: 2em;
 }
 
 #main #get-in-touch span {
-  color: lightblue;
+  color: #72ccca;
 }
 
 #main #get-in-touch p {
@@ -418,7 +419,7 @@ button:hover {
 }
 
 #main #get-in-touch #contact-form h2 {
-  color: lightblue;
+  color: #72ccca;
   text-align: center;
   font-size: 1.5em;
 }
@@ -453,7 +454,7 @@ button:hover {
 }
 
 #main #get-in-touch #contact-form #form-submit {
-  background-color: lightblue;
+  background-color: #72ccca;
   height: 10vh;
   border-radius: 2vh;
   border: none;
@@ -469,13 +470,13 @@ button:hover {
 }
 
 #main #socialize-with-us h1 {
-  color: grey;
+  color: #999999;
   text-align: center;
   margin-bottom: 5vh;
 }
 
 #main #socialize-with-us span {
-  color: lightblue;
+  color: #72ccca;
 }
 
 #main #socialize-with-us #socialize-content {
@@ -602,7 +603,7 @@ button:hover {
 
 #main #locations-contact-datas {
   height: 50vh;
-  background-color: lightblue;
+  background-color: #72ccca;
   color: white;
   padding: 0 15% 0;
   display: grid;
@@ -634,7 +635,7 @@ button:hover {
 #main footer {
   padding: 2vh 10%;
   height: 8vh;
-  background-color: brown;
+  background-color: #999999;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
