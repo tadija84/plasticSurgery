@@ -99,7 +99,6 @@
   top: 70vh;
   left: 7%;
   border-radius: 2vh;
-  border: solid black 1px;
 }
 
 #main #our-locations h1 {
@@ -217,7 +216,7 @@
 #main #selected-service {
   width: 100%;
   height: 50vh;
-  background-image: url("./images/homebackground.png");
+  background-image: url("./images/services-background.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -260,7 +259,86 @@
   padding: 5vh 40% 10vh 15%;
 }
 
-#main #our-mission .our-mission-content h2, #main #our-mission .our-mission-content p {
+#main #our-mission .our-mission-content h2,
+#main #our-mission .our-mission-content p {
   margin-bottom: 5vh;
+}
+
+#main #our-mission .our-mission-pic {
+  width: 20%;
+  height: 65vh;
+  background-image: url("./images/ourmission.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  bottom: 55vh;
+  left: 60%;
+}
+
+#main #our-mission #mission-button {
+  position: relative;
+  height: 10vh;
+  bottom: 70vh;
+  left: 15%;
+  background-color: white;
+  border: none;
+  border-radius: 1vh;
+}
+
+#main #get-in-touch {
+  width: 100%;
+  height: 80vh;
+  background-image: url("./images/homebackground.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#main #get-in-touch h2 {
+  color: grey;
+  text-align: center;
+}
+
+#main #get-in-touch span {
+  color: lightblue;
+}
+
+#main #get-in-touch p {
+  padding: 0 20%;
+  text-align: center;
+}
+
+#main #get-in-touch #contact-form {
+  width: 70%;
+  height: 80vh;
+  background-color: white;
+  position: relative;
+  left: 15%;
+  border-radius: 2vh;
+}
+
+#main #get-in-touch #contact-form h2 {
+  color: lightblue;
+  text-align: center;
+}
+
+#main #get-in-touch #contact-form #user-datas {
+  width: 100%;
+  height: 20vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+#main #get-in-touch #contact-form #user-country {
+  width: 100%;
+  height: 10vh;
+}
+
+#main #get-in-touch #contact-form #user-message {
+  width: 100%;
+  height: 30vh;
 }
 /*# sourceMappingURL=style.css.map */

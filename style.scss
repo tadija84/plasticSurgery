@@ -87,7 +87,6 @@ $main-color: lightblue;
     top: 70vh;
     left: 7%;
     border-radius: 2vh;
-    border: solid black 1px;
     h1 {
       color: grey;
       text-align: center;
@@ -195,7 +194,7 @@ $main-color: lightblue;
   #selected-service {
     width: 100%;
     height: 50vh;
-    background-image: url("./images/homebackground.png");
+    background-image: url("./images/services-background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -211,27 +210,98 @@ $main-color: lightblue;
       span {
         color: $main-color;
       }
-      .selected-service-info-content{
-          width: 100%;
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
+      .selected-service-info-content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
       }
     }
   }
-  #our-mission{
-      height: 70vh;
+  #our-mission {
+    height: 70vh;
+    width: 100%;
+    padding: 10vh 0;
+    .our-mission-content {
       width: 100%;
-      padding: 10vh 0;
-      .our-mission-content{
-          width: 100%;
-          height: 100%;
-          background-color: rgb(7, 197, 181);
-          color: white;
-          text-align: left;
-          padding: 5vh 40% 10vh 15%;
-          h2,p{
-              margin-bottom: 5vh;
-          }
+      height: 100%;
+      background-color: rgb(7, 197, 181);
+      color: white;
+      text-align: left;
+      padding: 5vh 40% 10vh 15%;
+      h2,
+      p {
+        margin-bottom: 5vh;
       }
+    }
+    .our-mission-pic {
+      width: 20%;
+      height: 65vh;
+      background-image: url("./images/ourmission.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      bottom: 55vh;
+      left: 60%;
+    }
+    #mission-button {
+      position: relative;
+      height: 10vh;
+      bottom: 70vh;
+      left: 15%;
+      background-color: white;
+      border: none;
+      border-radius: 1vh;
+    }
+  }
+  #get-in-touch {
+    width: 100%;
+    height: 80vh;
+    background-image: url("./images/homebackground.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h2 {
+      color: grey;
+      text-align: center;
+    }
+    span {
+      color: $main-color;
+    }
+    p {
+      padding: 0 20%;
+      text-align: center;
+    }
+    #contact-form {
+      width: 70%;
+      height: 80vh;
+      background-color: white;
+      position: relative;
+      left: 15%;
+      border-radius: 2vh;
+      h2 {
+        color: $main-color;
+        text-align: center;
+      }
+      #user-datas {
+        width: 100%;
+        height: 20vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 1em;
+        input {
+        }
+      }
+      #user-country {
+        width: 100%;
+        height: 10vh;
+      }
+      #user-message {
+        width: 100%;
+        height: 30vh;
+      }
+      
+    }
   }
 }
