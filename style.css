@@ -7,20 +7,20 @@ button:hover {
   cursor: pointer;
 }
 
-#aside {
-  background-color: #72ccca;
-}
-
 #main {
   width: 100vw;
   background-color: #f8f8f8;
 }
 
 #main header {
+  position: fixed;
   width: 100%;
   height: 10vh;
   display: flex;
   padding: 0 15%;
+  background-color: #f8f8f8;
+  top: 0;
+  z-index: 3;
 }
 
 #main header #logo {
@@ -78,9 +78,18 @@ button:hover {
   cursor: pointer;
 }
 
+#main header #header-content #closeMenu {
+  display: none;
+  justify-content: center;
+  height: 100%;
+  color: #72ccca;
+  font-size: 4em;
+}
+
 #main .first-div {
   width: 100%;
   height: 70vh;
+  position: relative;
   background-image: url(./images/headerimage.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -256,7 +265,7 @@ button:hover {
 
 #main #our-services .our-services-content .one-service button:hover {
   background-color: #72ccca;
-  color: white;
+  color: whi;
 }
 
 #main #our-services .our-services-content .first-service .service-image div {
@@ -501,7 +510,8 @@ button:hover {
   padding: 10vh 10%;
 }
 
-#main #socialize-with-us #socialize-content .one-socialize-div .inside-div h4, #main #socialize-with-us #socialize-content .one-socialize-div .inside-div p {
+#main #socialize-with-us #socialize-content .one-socialize-div .inside-div h4,
+#main #socialize-with-us #socialize-content .one-socialize-div .inside-div p {
   color: white;
   display: none;
   text-align: center;
@@ -519,7 +529,8 @@ button:hover {
   cursor: pointer;
 }
 
-#main #socialize-with-us #socialize-content .one-socialize-div .inside-div:hover h4, #main #socialize-with-us #socialize-content .one-socialize-div .inside-div:hover p {
+#main #socialize-with-us #socialize-content .one-socialize-div .inside-div:hover h4,
+#main #socialize-with-us #socialize-content .one-socialize-div .inside-div:hover p {
   display: inline-block;
 }
 
@@ -647,5 +658,40 @@ button:hover {
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   padding-left: 10%;
+}
+
+#aside {
+  background-color: #72ccca;
+  width: 15vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+  z-index: 7;
+}
+
+#aside select,
+#aside h3 {
+  background-color: #72ccca;
+  border: none;
+  font-size: 0.7em;
+  font-weight: 700;
+  width: 80%;
+  margin-left: 1vw;
+  color: white;
+  margin-top: 3vh;
+}
+
+#aside button {
+  font-size: 0.7em;
+  font-weight: 700;
+  width: 80%;
+  margin-left: 1vw;
+  color: #72ccca;
+  margin-top: 3vh;
+  height: 5vh;
+  border: none;
+  border-radius: 1vh;
 }
 /*# sourceMappingURL=style.css.map */
