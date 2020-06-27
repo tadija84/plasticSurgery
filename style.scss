@@ -36,11 +36,15 @@ $main-color: lightblue;
         justify-content: center;
         align-items: center;
         color: $main-color;
+        span{
+          color: red;
+        }
       }
       button {
         height: 60%;
         background-color: $main-color;
         border: none;
+        border-radius: 1vh;
       }
       #burger-menu {
         padding: 5% 0;
@@ -87,7 +91,9 @@ $main-color: lightblue;
     top: 70vh;
     left: 7%;
     border-radius: 2vh;
+    padding-top: 5vh;
     h1 {
+      height: 7vh;
       color: grey;
       text-align: center;
     }
@@ -104,7 +110,7 @@ $main-color: lightblue;
       position: absolute;
       top: 15vh;
       .one-location {
-        height: 40vh;
+        height: 45vh;
         border-radius: 2vh;
         background-color: blue;
         background-position: center;
@@ -116,12 +122,20 @@ $main-color: lightblue;
         color: white;
         position: absolute;
         top: 30vh;
+        height: 5vh;
+        width: 27%;
+        text-align: center;
+        font-size: 1.8em;
       }
       h5 {
         background-color: white;
         position: absolute;
-        top: 40vh;
+        top: 43vh;
+        margin-left: 7%;
         border-radius: 1vh;
+        height: 5vh;
+        width: 13%;
+        text-align: center;
       }
       .first-location {
         background-image: url(./images/miami_image.png);
@@ -137,7 +151,7 @@ $main-color: lightblue;
   #our-services {
     height: 120vh;
     width: 100%;
-    padding-top: 55vh;
+    padding-top: 60vh;
     h1 {
       color: grey;
       text-align: center;
@@ -160,33 +174,52 @@ $main-color: lightblue;
         align-items: center;
         justify-content: center;
         .service-image {
-          width: 10vh;
-          height: 10vh;
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          div{
+            width: 20vh;
+          height: 20vh;
           border-radius: 50%;
           background-position: center;
           background-size: cover;
           position: relative;
           bottom: 5vh;
+          }
+          
         }
       }
       .first-service {
         .service-image {
-          background-image: url("./images/face.png");
+         
+          div{
+             background-image: url("./images/face.png");
+          }
+         
         }
       }
       .second-service {
         .service-image {
-          background-image: url("./images/breast.png");
+          div{
+             background-image: url("./images/breast.png");
+          }
+         
         }
       }
       .third-service {
         .service-image {
-          background-image: url("./images/body.png");
+          div{
+             background-image: url("./images/body.png");
+          }
+         
         }
       }
       .fourth-service {
         .service-image {
-          background-image: url("./images/labia.png");
+          div{
+             background-image: url("./images/labia.png");
+          }
+         
         }
       }
     }

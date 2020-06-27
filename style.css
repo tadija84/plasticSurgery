@@ -46,10 +46,15 @@
   color: lightblue;
 }
 
+#main header #header-content #phone span {
+  color: red;
+}
+
 #main header #header-content button {
   height: 60%;
   background-color: lightblue;
   border: none;
+  border-radius: 1vh;
 }
 
 #main header #header-content #burger-menu {
@@ -99,9 +104,11 @@
   top: 70vh;
   left: 7%;
   border-radius: 2vh;
+  padding-top: 5vh;
 }
 
 #main #our-locations h1 {
+  height: 7vh;
   color: grey;
   text-align: center;
 }
@@ -122,7 +129,7 @@
 }
 
 #main #our-locations .locations-content .one-location {
-  height: 40vh;
+  height: 45vh;
   border-radius: 2vh;
   background-color: blue;
   background-position: center;
@@ -135,13 +142,21 @@
   color: white;
   position: absolute;
   top: 30vh;
+  height: 5vh;
+  width: 27%;
+  text-align: center;
+  font-size: 1.8em;
 }
 
 #main #our-locations .locations-content h5 {
   background-color: white;
   position: absolute;
-  top: 40vh;
+  top: 43vh;
+  margin-left: 7%;
   border-radius: 1vh;
+  height: 5vh;
+  width: 13%;
+  text-align: center;
 }
 
 #main #our-locations .locations-content .first-location {
@@ -159,7 +174,7 @@
 #main #our-services {
   height: 120vh;
   width: 100%;
-  padding-top: 55vh;
+  padding-top: 60vh;
 }
 
 #main #our-services h1 {
@@ -188,8 +203,14 @@
 }
 
 #main #our-services .our-services-content .one-service .service-image {
-  width: 10vh;
-  height: 10vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+#main #our-services .our-services-content .one-service .service-image div {
+  width: 20vh;
+  height: 20vh;
   border-radius: 50%;
   background-position: center;
   background-size: cover;
@@ -197,19 +218,19 @@
   bottom: 5vh;
 }
 
-#main #our-services .our-services-content .first-service .service-image {
+#main #our-services .our-services-content .first-service .service-image div {
   background-image: url("./images/face.png");
 }
 
-#main #our-services .our-services-content .second-service .service-image {
+#main #our-services .our-services-content .second-service .service-image div {
   background-image: url("./images/breast.png");
 }
 
-#main #our-services .our-services-content .third-service .service-image {
+#main #our-services .our-services-content .third-service .service-image div {
   background-image: url("./images/body.png");
 }
 
-#main #our-services .our-services-content .fourth-service .service-image {
+#main #our-services .our-services-content .fourth-service .service-image div {
   background-image: url("./images/labia.png");
 }
 
