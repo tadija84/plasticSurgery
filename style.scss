@@ -7,7 +7,21 @@ button:hover {
 }
 $main-color: #72ccca;
 $footer-color: #999999;
-
+@mixin media-medium {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+@mixin media-tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin media-phone {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
 #main {
   width: 100vw;
   background-color: #f8f8f8;
@@ -20,6 +34,9 @@ $footer-color: #999999;
     background-color: #f8f8f8;
     top: 0;
     z-index: 3;
+    @include media-tablet{
+      z-index: 8;
+    }
     #logo {
       width: 50%;
       height: 100%;
@@ -27,6 +44,9 @@ $footer-color: #999999;
       background-repeat: no-repeat;
       background-position: left center;
       background-size: 50% auto;
+      @include media-phone{
+        background-size: contain;
+      }
     }
     #header-content {
       width: 50%;
@@ -36,14 +56,22 @@ $footer-color: #999999;
       grid-column-gap: 5%;
       justify-content: center;
       align-items: center;
+      @include media-tablet{
+        grid-template-columns: 1fr;
+        justify-content: flex-end;
+        padding-left: 40%;
+      }
+      @include media-phone{
+        padding-left: 30%;
+      }
       #phone {
         height: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
         color: $main-color;
-        span {
-          color: red;
+        @include media-medium{
+          display: none;
         }
       }
       button {
@@ -51,6 +79,9 @@ $footer-color: #999999;
         background-color: $main-color;
         border: none;
         border-radius: 1vh;
+        @include media-tablet{
+          display: none;
+        }
       }
       #burger-menu {
         padding: 5% 0;
@@ -62,6 +93,14 @@ $footer-color: #999999;
         .burger-div {
           background-color: $main-color;
         }
+        @include media-medium{
+         width: 30%;
+        }
+        @include media-tablet{
+          width: 100%;
+          position: relative;
+          float: right;
+         }
       }
       #burger-menu:hover {
         cursor: pointer;
@@ -77,16 +116,20 @@ $footer-color: #999999;
   }
   .first-div {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     position: relative;
+    margin-top: 10vh;
     background-image: url(./images/headerimage.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     display: grid;
     justify-content: left;
     align-items: center;
     padding-left: 15%;
+    @include media-phone {
+      padding-left: 5%;
+    }
     .first-div-content {
       h2 {
         color: white;
@@ -94,9 +137,21 @@ $footer-color: #999999;
       .center-h {
         font-weight: 100;
         font-size: 3.2em;
+        @include media-tablet {
+          font-size: 3em;
+        }
+        @include media-phone {
+          font-size: 2.5em;
+        }
       }
       .plastic-h {
         font-size: 3.5em;
+        @include media-tablet {
+          font-size: 3.1em;
+        }
+        @include media-phone {
+          font-size: 2.8em;
+        }
       }
     }
   }
@@ -105,10 +160,13 @@ $footer-color: #999999;
     height: 50vh;
     background-color: white;
     position: absolute;
-    top: 70vh;
+    top: 80vh;
     left: 7%;
     border-radius: 2vh;
     padding-top: 5vh;
+    @include media-tablet{
+      height: 153vh;
+    }
     h1 {
       height: 7vh;
       color: $footer-color;
@@ -126,32 +184,42 @@ $footer-color: #999999;
       grid-gap: 5%;
       position: absolute;
       top: 15vh;
+      @include media-tablet{
+        height: 150vh;
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr 1fr 1fr;
+       grid-gap: 5vh;
+      }
       .one-location {
         height: 45vh;
         border-radius: 2vh;
         background-color: blue;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: auto;
+        background-size:  auto 190%;
       }
       h4 {
         background-color: $main-color;
         color: white;
-        position: absolute;
+        position: relative;
         top: 30vh;
         height: 5vh;
-        width: 27%;
+        width: 100%;
         text-align: center;
         font-size: 1.8em;
+        @include media-medium{
+          font-size: 1.5em;
+        }
       }
-      h5 {
+      button {
         background-color: white;
-        position: absolute;
-        top: 43vh;
-        margin-left: 7%;
+        width: 50%;
+        height: 8vh;
+        position: relative;
+        top: 35vh;
+        margin-left: 25%;
+        border: none;
         border-radius: 1vh;
-        height: 5vh;
-        width: 13%;
         text-align: center;
       }
       .first-location {
@@ -169,6 +237,13 @@ $footer-color: #999999;
     height: 135vh;
     width: 100%;
     padding-top: 60vh;
+    @include media-tablet{
+      height: 300vh;
+      padding-top: 170vh;
+    }
+    @include media-phone{
+      height: 420vh;
+    }
     h1 {
       color: $footer-color;
       text-align: center;
@@ -183,6 +258,17 @@ $footer-color: #999999;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-gap: 3%;
+      @include media-tablet{
+        height: 140vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 2vh;
+      }
+      @include media-phone{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 15vh;
+      }
       .one-service {
         background-color: #c0e8e7;
         display: grid;
@@ -212,16 +298,25 @@ $footer-color: #999999;
           padding: 0 5%;
         }
         h5 {
+          display: inline-block;
           color: #479492;
-          font-size: 1.3em;
-          padding-bottom: 5vh;
+          font-size: 1.2em;
+          padding-bottom: 3vh;
+          height: 10vh;
+        }
+        p{
+          font-size: 0.9em;
+          height: 25vh;
+          @include media-medium{
+            font-size: 0.8em;
+          }
         }
         button {
           background-color: white;
           width: 80%;
           height: 10vh;
           position: relative;
-          bottom: 6vh;
+          bottom: 15vh;
           left: 10%;
           border: none;
           border-radius: 1vh;
@@ -229,7 +324,7 @@ $footer-color: #999999;
         }
         button:hover {
           background-color: $main-color;
-          color: whi;
+          color: white;
         }
       }
       .first-service {
@@ -270,12 +365,19 @@ $footer-color: #999999;
     background-position: center;
     background-size: cover;
     padding: 7vh 15%;
+    @include media-tablet{
+      padding: 10vh 5%;
+      height: 100vh;
+    }
     #selected-service-info {
       width: 100%;
       height: 46vh;
       background-color: white;
       border-radius: 2vh;
       padding: 5vh 5%;
+      @include media-tablet{
+        height: 80vh;
+      }
       h2 {
         color: $footer-color;
         text-align: center;
@@ -288,11 +390,17 @@ $footer-color: #999999;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        @include media-tablet{
+          grid-template-columns: 1fr;
+        }
         ul {
           list-style: none;
           li {
-            margin-bottom: 2vh;
-            font-size: 1.1em;
+            margin-bottom: 1vh;
+            font-size: 1em;
+            @include media-medium{
+              font-size: 0.9em;
+            }
           }
           li:hover {
             margin-left: 0.5em;
@@ -315,6 +423,12 @@ $footer-color: #999999;
     height: 70vh;
     width: 100%;
     padding: 10vh 0;
+    @include media-tablet{
+      height: 100vh;
+    }
+    @include media-phone{
+      height: 170vh;
+    }
     .our-mission-content {
       width: 100%;
       height: 100%;
@@ -322,6 +436,13 @@ $footer-color: #999999;
       color: white;
       text-align: left;
       padding: 5vh 40% 10vh 15%;
+      @include media-medium{
+        padding: 5vh 40% 10vh 5%;
+      }
+      @include media-phone{
+        height: 50%;
+        padding: 5vh  15%;
+      }
       h2,
       p {
         margin-bottom: 5vh;
@@ -342,6 +463,16 @@ $footer-color: #999999;
       position: relative;
       bottom: 55vh;
       left: 65%;
+      @include media-tablet{
+        width: 40%;
+        bottom: 70vh;
+        left: 60%;
+      }
+      @include media-phone{
+        width: 100%;
+        left: 0;
+        bottom: -10vh;
+      }
     }
     #mission-button {
       position: relative;
@@ -354,6 +485,13 @@ $footer-color: #999999;
       border-radius: 1vh;
       color: $main-color;
       font-size: 1.2em;
+      @include media-tablet{
+        width: 30%;
+      }
+      @include media-phone{
+        width: 40%;
+        left: 30%;
+      }
     }
   }
   #get-in-touch {
@@ -364,6 +502,9 @@ $footer-color: #999999;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 10vh;
+    @include media-phone{
+      height: 120vh;
+    }
     h2 {
       color: $footer-color;
       text-align: center;
@@ -385,6 +526,17 @@ $footer-color: #999999;
       left: 25%;
       border-radius: 2vh;
       padding: 5vh 5%;
+      @include media-medium{
+        width: 80%;
+        left: 10%;
+        padding: 5vh 1%;
+      }
+      @include media-phone{
+        width: 90%;
+        height: 90vh;
+        left: 3%;
+        padding: 5vh 2%;
+      }
       h2 {
         color: $main-color;
         text-align: center;
@@ -398,6 +550,11 @@ $footer-color: #999999;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-gap: 3vh;
+        @include media-phone{
+          height: 40vh;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
         input {
           border: solid black 1px;
           border-radius: 2vh;
@@ -423,6 +580,10 @@ $footer-color: #999999;
         width: 35%;
         margin-top: 3vh;
         margin-left: 30%;
+        @include media-phone{
+          width: 50%;
+          margin-left: 25%;
+        }
       }
     }
   }
@@ -430,6 +591,10 @@ $footer-color: #999999;
     height: 110vh;
     width: 100%;
     padding-top: 30vh;
+    @include media-tablet{
+      height: 360vh;
+      padding-top: 40vh;
+    }
     h1 {
       color: $footer-color;
       text-align: center;
@@ -443,6 +608,14 @@ $footer-color: #999999;
       height: 40vh;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      @include media-tablet{
+        width: 60%;
+        margin-left: 20%;
+        height: 290vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 2vh;
+      }
       .one-socialize-div {
         background-position: center;
         background-repeat: no-repeat;
@@ -503,7 +676,16 @@ $footer-color: #999999;
     background-color: white;
     border-radius: 2vh;
     position: absolute;
-    top: 520vh;
+    top: 530vh;
+    @include media-tablet{
+      top: 1020vh;
+      width: 90%;
+      left: 5%;
+      height: 30vh;
+    }
+    @include media-phone{
+      top: 1250vh;
+    }
     .bottom-logo {
       width: 100%;
       height: 50%;
@@ -515,6 +697,10 @@ $footer-color: #999999;
     h5 {
       text-align: center;
       padding: 0 10%;
+      @include media-phone{
+        padding: 0 5%;
+        font-size: 0.9;
+      }
     }
     .social-nets-logos {
       width: 100%;
@@ -552,10 +738,27 @@ $footer-color: #999999;
     padding: 0 15% 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    @include media-medium{
+      height: 60vh;
+    }
+    @include media-tablet{
+      height: 140vh;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: 3vh;
+      padding-top: 25vh;
+    }
     .one-location-info {
       padding: 15vh 10% 5vh;
       height: 50vh;
-
+      @include media-medium{
+        height: 60vh;
+      }
+      @include media-tablet{
+        padding: 0 10%;
+        height: 30vh;
+        border: solid white 1px;
+      }
       h2:after {
         content: "";
         display: block;
@@ -570,6 +773,7 @@ $footer-color: #999999;
     .second-location-info {
       border-left: solid white 1px;
       border-right: solid white 1px;
+      
     }
   }
   footer {
@@ -580,11 +784,19 @@ $footer-color: #999999;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     color: white;
+    @include media-tablet{
+      height: 10vh;
+      padding: 2vh 5%;
+      font-size: 0.8em;
+    }
     .footer-right {
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-content: space-around;
       padding-left: 10%;
+      @include media-tablet{
+        padding: 0;
+      }
     }
   }
 }
@@ -597,6 +809,13 @@ $footer-color: #999999;
   right: 0;
   display: none;
   z-index: 7;
+  @include media-tablet{
+    width: 50%;
+    padding-top: 15vh;
+  }
+  @include media-phone{
+    width: 90%;
+  }
   select,
   h3 {
     background-color: $main-color;

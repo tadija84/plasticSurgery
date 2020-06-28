@@ -23,6 +23,12 @@ button:hover {
   z-index: 3;
 }
 
+@media screen and (max-width: 768px) {
+  #main header {
+    z-index: 8;
+  }
+}
+
 #main header #logo {
   width: 50%;
   height: 100%;
@@ -30,6 +36,12 @@ button:hover {
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 50% auto;
+}
+
+@media screen and (max-width: 480px) {
+  #main header #logo {
+    background-size: contain;
+  }
 }
 
 #main header #header-content {
@@ -42,6 +54,20 @@ button:hover {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  #main header #header-content {
+    grid-template-columns: 1fr;
+    justify-content: flex-end;
+    padding-left: 40%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main header #header-content {
+    padding-left: 30%;
+  }
+}
+
 #main header #header-content #phone {
   height: 60%;
   display: flex;
@@ -50,8 +76,10 @@ button:hover {
   color: #72ccca;
 }
 
-#main header #header-content #phone span {
-  color: red;
+@media screen and (max-width: 900px) {
+  #main header #header-content #phone {
+    display: none;
+  }
 }
 
 #main header #header-content button {
@@ -59,6 +87,12 @@ button:hover {
   background-color: #72ccca;
   border: none;
   border-radius: 1vh;
+}
+
+@media screen and (max-width: 768px) {
+  #main header #header-content button {
+    display: none;
+  }
 }
 
 #main header #header-content #burger-menu {
@@ -72,6 +106,20 @@ button:hover {
 
 #main header #header-content #burger-menu .burger-div {
   background-color: #72ccca;
+}
+
+@media screen and (max-width: 900px) {
+  #main header #header-content #burger-menu {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main header #header-content #burger-menu {
+    width: 100%;
+    position: relative;
+    float: right;
+  }
 }
 
 #main header #header-content #burger-menu:hover {
@@ -88,16 +136,23 @@ button:hover {
 
 #main .first-div {
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   position: relative;
+  margin-top: 10vh;
   background-image: url(./images/headerimage.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   display: grid;
   justify-content: left;
   align-items: center;
   padding-left: 15%;
+}
+
+@media screen and (max-width: 480px) {
+  #main .first-div {
+    padding-left: 5%;
+  }
 }
 
 #main .first-div .first-div-content h2 {
@@ -109,8 +164,32 @@ button:hover {
   font-size: 3.2em;
 }
 
+@media screen and (max-width: 768px) {
+  #main .first-div .first-div-content .center-h {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main .first-div .first-div-content .center-h {
+    font-size: 2.5em;
+  }
+}
+
 #main .first-div .first-div-content .plastic-h {
   font-size: 3.5em;
+}
+
+@media screen and (max-width: 768px) {
+  #main .first-div .first-div-content .plastic-h {
+    font-size: 3.1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main .first-div .first-div-content .plastic-h {
+    font-size: 2.8em;
+  }
 }
 
 #main #our-locations {
@@ -118,10 +197,16 @@ button:hover {
   height: 50vh;
   background-color: white;
   position: absolute;
-  top: 70vh;
+  top: 80vh;
   left: 7%;
   border-radius: 2vh;
   padding-top: 5vh;
+}
+
+@media screen and (max-width: 768px) {
+  #main #our-locations {
+    height: 153vh;
+  }
 }
 
 #main #our-locations h1 {
@@ -145,34 +230,50 @@ button:hover {
   top: 15vh;
 }
 
+@media screen and (max-width: 768px) {
+  #main #our-locations .locations-content {
+    height: 150vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5vh;
+  }
+}
+
 #main #our-locations .locations-content .one-location {
   height: 45vh;
   border-radius: 2vh;
   background-color: blue;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: auto 190%;
 }
 
 #main #our-locations .locations-content h4 {
   background-color: #72ccca;
   color: white;
-  position: absolute;
+  position: relative;
   top: 30vh;
   height: 5vh;
-  width: 27%;
+  width: 100%;
   text-align: center;
   font-size: 1.8em;
 }
 
-#main #our-locations .locations-content h5 {
+@media screen and (max-width: 900px) {
+  #main #our-locations .locations-content h4 {
+    font-size: 1.5em;
+  }
+}
+
+#main #our-locations .locations-content button {
   background-color: white;
-  position: absolute;
-  top: 43vh;
-  margin-left: 7%;
+  width: 50%;
+  height: 8vh;
+  position: relative;
+  top: 35vh;
+  margin-left: 25%;
+  border: none;
   border-radius: 1vh;
-  height: 5vh;
-  width: 13%;
   text-align: center;
 }
 
@@ -194,6 +295,19 @@ button:hover {
   padding-top: 60vh;
 }
 
+@media screen and (max-width: 768px) {
+  #main #our-services {
+    height: 300vh;
+    padding-top: 170vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main #our-services {
+    height: 420vh;
+  }
+}
+
 #main #our-services h1 {
   color: #999999;
   text-align: center;
@@ -210,6 +324,23 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 3%;
+}
+
+@media screen and (max-width: 768px) {
+  #main #our-services .our-services-content {
+    height: 140vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main #our-services .our-services-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 15vh;
+  }
 }
 
 #main #our-services .our-services-content .one-service {
@@ -246,9 +377,22 @@ button:hover {
 }
 
 #main #our-services .our-services-content .one-service h5 {
+  display: inline-block;
   color: #479492;
-  font-size: 1.3em;
-  padding-bottom: 5vh;
+  font-size: 1.2em;
+  padding-bottom: 3vh;
+  height: 10vh;
+}
+
+#main #our-services .our-services-content .one-service p {
+  font-size: 0.9em;
+  height: 25vh;
+}
+
+@media screen and (max-width: 900px) {
+  #main #our-services .our-services-content .one-service p {
+    font-size: 0.8em;
+  }
 }
 
 #main #our-services .our-services-content .one-service button {
@@ -256,7 +400,7 @@ button:hover {
   width: 80%;
   height: 10vh;
   position: relative;
-  bottom: 6vh;
+  bottom: 15vh;
   left: 10%;
   border: none;
   border-radius: 1vh;
@@ -265,7 +409,7 @@ button:hover {
 
 #main #our-services .our-services-content .one-service button:hover {
   background-color: #72ccca;
-  color: whi;
+  color: white;
 }
 
 #main #our-services .our-services-content .first-service .service-image div {
@@ -294,12 +438,25 @@ button:hover {
   padding: 7vh 15%;
 }
 
+@media screen and (max-width: 768px) {
+  #main #selected-service {
+    padding: 10vh 5%;
+    height: 100vh;
+  }
+}
+
 #main #selected-service #selected-service-info {
   width: 100%;
   height: 46vh;
   background-color: white;
   border-radius: 2vh;
   padding: 5vh 5%;
+}
+
+@media screen and (max-width: 768px) {
+  #main #selected-service #selected-service-info {
+    height: 80vh;
+  }
 }
 
 #main #selected-service #selected-service-info h2 {
@@ -318,13 +475,25 @@ button:hover {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+@media screen and (max-width: 768px) {
+  #main #selected-service #selected-service-info .selected-service-info-content {
+    grid-template-columns: 1fr;
+  }
+}
+
 #main #selected-service #selected-service-info .selected-service-info-content ul {
   list-style: none;
 }
 
 #main #selected-service #selected-service-info .selected-service-info-content ul li {
-  margin-bottom: 2vh;
-  font-size: 1.1em;
+  margin-bottom: 1vh;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 900px) {
+  #main #selected-service #selected-service-info .selected-service-info-content ul li {
+    font-size: 0.9em;
+  }
 }
 
 #main #selected-service #selected-service-info .selected-service-info-content ul li:hover {
@@ -348,6 +517,18 @@ button:hover {
   padding: 10vh 0;
 }
 
+@media screen and (max-width: 768px) {
+  #main #our-mission {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main #our-mission {
+    height: 170vh;
+  }
+}
+
 #main #our-mission .our-mission-content {
   width: 100%;
   height: 100%;
@@ -355,6 +536,19 @@ button:hover {
   color: white;
   text-align: left;
   padding: 5vh 40% 10vh 15%;
+}
+
+@media screen and (max-width: 900px) {
+  #main #our-mission .our-mission-content {
+    padding: 5vh 40% 10vh 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main #our-mission .our-mission-content {
+    height: 50%;
+    padding: 5vh  15%;
+  }
 }
 
 #main #our-mission .our-mission-content h2,
@@ -378,6 +572,22 @@ button:hover {
   left: 65%;
 }
 
+@media screen and (max-width: 768px) {
+  #main #our-mission .our-mission-pic {
+    width: 40%;
+    bottom: 70vh;
+    left: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main #our-mission .our-mission-pic {
+    width: 100%;
+    left: 0;
+    bottom: -10vh;
+  }
+}
+
 #main #our-mission #mission-button {
   position: relative;
   height: 10vh;
@@ -391,6 +601,19 @@ button:hover {
   font-size: 1.2em;
 }
 
+@media screen and (max-width: 768px) {
+  #main #our-mission #mission-button {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main #our-mission #mission-button {
+    width: 40%;
+    left: 30%;
+  }
+}
+
 #main #get-in-touch {
   width: 100%;
   height: 80vh;
@@ -399,6 +622,12 @@ button:hover {
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 10vh;
+}
+
+@media screen and (max-width: 480px) {
+  #main #get-in-touch {
+    height: 120vh;
+  }
 }
 
 #main #get-in-touch h2 {
@@ -427,6 +656,23 @@ button:hover {
   padding: 5vh 5%;
 }
 
+@media screen and (max-width: 900px) {
+  #main #get-in-touch #contact-form {
+    width: 80%;
+    left: 10%;
+    padding: 5vh 1%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main #get-in-touch #contact-form {
+    width: 90%;
+    height: 90vh;
+    left: 3%;
+    padding: 5vh 2%;
+  }
+}
+
 #main #get-in-touch #contact-form h2 {
   color: #72ccca;
   text-align: center;
@@ -441,6 +687,14 @@ button:hover {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 3vh;
+}
+
+@media screen and (max-width: 480px) {
+  #main #get-in-touch #contact-form #user-datas {
+    height: 40vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
 }
 
 #main #get-in-touch #contact-form #user-datas input {
@@ -472,10 +726,24 @@ button:hover {
   margin-left: 30%;
 }
 
+@media screen and (max-width: 480px) {
+  #main #get-in-touch #contact-form #form-submit {
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+
 #main #socialize-with-us {
   height: 110vh;
   width: 100%;
   padding-top: 30vh;
+}
+
+@media screen and (max-width: 768px) {
+  #main #socialize-with-us {
+    height: 360vh;
+    padding-top: 40vh;
+  }
 }
 
 #main #socialize-with-us h1 {
@@ -493,6 +761,17 @@ button:hover {
   height: 40vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 768px) {
+  #main #socialize-with-us #socialize-content {
+    width: 60%;
+    margin-left: 20%;
+    height: 290vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2vh;
+  }
 }
 
 #main #socialize-with-us #socialize-content .one-socialize-div {
@@ -561,7 +840,22 @@ button:hover {
   background-color: white;
   border-radius: 2vh;
   position: absolute;
-  top: 520vh;
+  top: 530vh;
+}
+
+@media screen and (max-width: 768px) {
+  #main #social-networks-wraper {
+    top: 1020vh;
+    width: 90%;
+    left: 5%;
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main #social-networks-wraper {
+    top: 1250vh;
+  }
 }
 
 #main #social-networks-wraper .bottom-logo {
@@ -576,6 +870,13 @@ button:hover {
 #main #social-networks-wraper h5 {
   text-align: center;
   padding: 0 10%;
+}
+
+@media screen and (max-width: 480px) {
+  #main #social-networks-wraper h5 {
+    padding: 0 5%;
+    font-size: 0.9;
+  }
 }
 
 #main #social-networks-wraper .social-nets-logos {
@@ -621,9 +922,39 @@ button:hover {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+@media screen and (max-width: 900px) {
+  #main #locations-contact-datas {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main #locations-contact-datas {
+    height: 140vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 3vh;
+    padding-top: 25vh;
+  }
+}
+
 #main #locations-contact-datas .one-location-info {
   padding: 15vh 10% 5vh;
   height: 50vh;
+}
+
+@media screen and (max-width: 900px) {
+  #main #locations-contact-datas .one-location-info {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main #locations-contact-datas .one-location-info {
+    padding: 0 10%;
+    height: 30vh;
+    border: solid white 1px;
+  }
 }
 
 #main #locations-contact-datas .one-location-info h2:after {
@@ -653,11 +984,25 @@ button:hover {
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  #main footer {
+    height: 10vh;
+    padding: 2vh 5%;
+    font-size: 0.8em;
+  }
+}
+
 #main footer .footer-right {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   padding-left: 10%;
+}
+
+@media screen and (max-width: 768px) {
+  #main footer .footer-right {
+    padding: 0;
+  }
 }
 
 #aside {
@@ -669,6 +1014,19 @@ button:hover {
   right: 0;
   display: none;
   z-index: 7;
+}
+
+@media screen and (max-width: 768px) {
+  #aside {
+    width: 50%;
+    padding-top: 15vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #aside {
+    width: 90%;
+  }
 }
 
 #aside select,
